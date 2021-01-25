@@ -1,37 +1,31 @@
 import './styles/style.scss';
 import { NavBar } from "./components/NavBar";
 import { ListFeatures } from './components/ListFeatures';
+import { OurTeam } from './components/OurTeam';
+import { Intro } from './components/Intro';
+import { Footer } from './components/Footer';
+import ContactUS from './components/ContactUS';
 
 function App() {
   return (
     <div>
       <NavBar />
       <section>
-        <div className="intro">
-          <div className="сontainer">
-            <div className="Title">
-              <h5>TontonizeR</h5>
-              <h5>Beutiful UI, Customization and more.</h5>
-              <h5>We are TontonizeR!</h5>
-            </div>
-            <div className="BtnDownload">
-              <button className="Download">
-                <a href="#Download">Download</a>
-              </button>
-            </div>
-          </div>
-        </div>
-        
+        <Intro />
       </section>
       <section>
-        <ListFeatures/>
+        <ListFeatures />
       </section>
       <section>
+        <OurTeam />
+      </section>
+      <section>
+        <ContactUS />
+      </section>
+      <section>
+        <Footer />
+      </section>
 
-      </section>
-      <section>
-
-      </section>
     </div>
   );
 }
