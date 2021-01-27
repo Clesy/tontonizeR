@@ -188,8 +188,9 @@ section {
 
 .Products {
     width: auto;
-    height: auto;
+    height: 1100px;
 }
+
 .ProductsHeading {
     @include heading();
 }
@@ -222,13 +223,13 @@ section {
     text-align: left;
     p {
         font-size: 17px;
-    
-        span{
+
+        span {
             font-weight: bold;
         }
     }
     button {
-        background: linear-gradient(to left, #FC0102 -35.9%, #4A32A7 122.17%);
+        background: linear-gradient(to left, #fc0102 -35.9%, #4a32a7 122.17%);
         width: 130px;
         height: 40px;
         border: none;
@@ -243,7 +244,7 @@ section {
         -ms-transition: 0.5s;
         -o-transition: 0.5s;
         background-size: 200%;
-        
+
         &:hover {
             background-position: right;
         }
@@ -256,8 +257,15 @@ section {
     }
 }
 
-
 /*CONTACT US*/
+
+.ContactUS{
+    height: 800px;
+}
+
+.ContactUSHeading{
+    @include heading();
+}
 
 #FullNameContactUs,
 #EmailContactUs,
@@ -293,22 +301,25 @@ textarea {
     }
 }
 
-.ContactUS {
+.ContactUSColumn {
     background-color: #e8e8e8;
     padding: 10px;
-    border-radius: 50px;
+    border-radius: 30px;
     margin: 10px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
 }
 
 .column {
-    float: left;
-    width: 50%;
-    margin-top: 6px;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // float: left;
+    // width: 50%;
+    // margin-top: 6px;
+    // padding: 20px;
 }
 
 .row {
@@ -317,6 +328,17 @@ textarea {
         display: table;
         clear: both;
     }
+}
+
+.personalData {
+    display: flex;
+    justify-content: center;
+    p {
+        margin-left: 20px;
+    }
+}
+#personal{
+    margin-top: 5px ;
 }
 
 /*FOOTER*/
@@ -383,7 +405,7 @@ textarea {
         padding: 0;
         height: 400px;
     }
-    
+
     .ProductsImage {
         img {
             width: 140px;
@@ -394,8 +416,8 @@ textarea {
         text-align: left;
         p {
             font-size: 15px;
-        
-            span{
+
+            span {
                 font-weight: bold;
             }
         }
