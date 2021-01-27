@@ -19,7 +19,7 @@ export const OurTeam = () => {
                             <a href="https://github.com/MedMM" className="OurTeamContact">
                                 <img src={ourTeamContactGitHub} alt="ContactGitHub" />
                             </a>
-                            <a href="https://t.me/Vashota" className="OurTeamContact">
+                            <a href="https://t.me/prophecy_chill" className="OurTeamContact">
                                 <img src={ourTeamContactTelegram} alt="ContactTelegram" />
                             </a>
 

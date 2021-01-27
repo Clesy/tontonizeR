@@ -36,7 +36,6 @@ section {
 }
 .NavMenuLink {
     display: flex;
-
     li {
         list-style: none;
         a {
@@ -129,7 +128,7 @@ section {
 /*LIST OF AMAZING FEATURES */
 
 .ListOfAmazingFeatures {
-    height: 600px;
+    height: 650px;
 }
 
 .ListHeading {
@@ -154,7 +153,7 @@ section {
 /*OUR TEAM*/
 
 .OurTeam {
-    height: 450px;
+    height: 400px;
 }
 
 .OurTeamHeading {
@@ -186,6 +185,76 @@ section {
 }
 
 /*PRODUCTS*/
+
+.Products {
+    width: auto;
+    height: auto;
+}
+.ProductsHeading {
+    @include heading();
+}
+
+.ProductsColumn {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.Game {
+    margin: 0;
+    padding: 0;
+    height: 330px;
+}
+
+.ProductsImage {
+    img {
+        width: 200px;
+        height: 200px;
+        border: none;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+    }
+}
+.ProductsInfo {
+    text-align: left;
+    p {
+        font-size: 17px;
+    
+        span{
+            font-weight: bold;
+        }
+    }
+    button {
+        background: linear-gradient(to left, #FC0102 -35.9%, #4A32A7 122.17%);
+        width: 130px;
+        height: 40px;
+        border: none;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+        background-size: 200%;
+        
+        &:hover {
+            background-position: right;
+        }
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 17px;
+            font-weight: 400;
+        }
+    }
+}
 
 
 /*CONTACT US*/
@@ -250,7 +319,6 @@ textarea {
     }
 }
 
-
 /*FOOTER*/
 
 .FooterInfo {
@@ -264,12 +332,11 @@ textarea {
     -o-border-radius: 30px 30px 0 0;
 }
 .FooterSocial {
-    img{
+    img {
         width: 60px;
         height: 60px;
     }
 }
-
 
 /*MEDIA QUERY*/
 @media screen and (max-width: 790px) {
@@ -309,6 +376,35 @@ textarea {
             padding: 5px;
             width: 40px;
             height: 40px;
+        }
+    }
+    .Game {
+        margin: 0;
+        padding: 0;
+        height: 400px;
+    }
+    
+    .ProductsImage {
+        img {
+            width: 140px;
+            height: 140px;
+        }
+    }
+    .ProductsInfo {
+        text-align: left;
+        p {
+            font-size: 15px;
+        
+            span{
+                font-weight: bold;
+            }
+        }
+        button {
+            width: 100px;
+            height: 30px;
+            a {
+                font-size: 14px;
+            }
         }
     }
 }

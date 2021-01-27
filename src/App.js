@@ -1,10 +1,11 @@
 import './styles/style.scss';
-import { NavBar } from "./components/NavBar";
+import NavBar from "./components/NavBar";
 import { ListFeatures } from './components/ListFeatures';
 import { OurTeam } from './components/OurTeam';
 import { Intro } from './components/Intro';
 import { Footer } from './components/Footer';
 import ContactUS from './components/ContactUS';
+import Products from './components/Products';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
       </section>
       <section>
         <OurTeam />
+      </section>
+      <section>
+        <Products />
       </section>
       <section>
         <ContactUS />
