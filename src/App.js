@@ -1,5 +1,5 @@
 import './styles/style.scss';
-import NavBar from "./components/NavBar";
+import { NavBar } from './components/NavBar';
 import { ListFeatures } from './components/ListFeatures';
 import { OurTeam } from './components/OurTeam';
 import { Intro } from './components/Intro';
