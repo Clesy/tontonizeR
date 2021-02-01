@@ -13,7 +13,7 @@ class Producs extends Component {
                         <div className="ProductsHeading">
                             <h1>Products</h1>
                         </div>
-                        <div className="Game">
+                        <div className="Game one">
                             <div className="ProductsColumn" >
                                 <div className="ProductsImage">
                                     <img src={alias} alt="" />
@@ -33,7 +33,7 @@ class Producs extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="Game">
+                        <div className="Game two">
                             <div className="ProductsColumn" >
                                 <div className="ProductsInfo">
                                     <p Style="margin-left: 20px;">2048 is a single-player sliding block puzzle game designed by Italian web
@@ -56,7 +56,7 @@ class Producs extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="Game">
+                        <div className="Game three">
                             <div className="ProductsColumn">
                                 <div className="ProductsImage">
                                     <img src={jumper} alt="" />

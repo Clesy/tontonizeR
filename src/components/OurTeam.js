@@ -9,7 +9,7 @@ export const OurTeam = () => {
             <div className="OurTeam">
                 <div className="container">
                     <div className="OurTeamHeading">
-                        <h1>our team</h1>
+                        <h1>Our team</h1>
                     </div>
                     <div className="OurTeamInfo">
                         <div className="OurTeamColumn">

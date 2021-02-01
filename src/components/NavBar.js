@@ -14,10 +14,9 @@ export const NavBar = () => {
                         <div className="NavLogo">
                             <img src={logo} alt="Logo" />
                         </div>
-                        <div 
-                        className={active ? 'NavMenu active' : 'NavMenu'}
-                        onClick={() => setActive(!active)}>
-                            {active ? 'close' : 'open'}
+                        <div
+                            className={active ? 'NavMenu active' : 'NavMenu'}
+                            onClick={() => setActive(!active)}>
                             <nav>
                                 <a href
                                     className="menuBtn"

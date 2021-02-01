@@ -1,5 +1,3 @@
-import ourTeamContactTelegram from '../images/telegramIcon.svg';
-
 
 export const Footer = () => {
     return (
@@ -7,13 +5,22 @@ export const Footer = () => {
             <footer>
                 <div className="FooterInfo">
                     <div className="container">
-                        <div className="FooterSocial">
-                            <a href="https://t.me/Tontonizer">
-                                <img src={ourTeamContactTelegram} alt="" />
-                            </a>
-                        </div>
-                        <div className="CrearotInfo">
-                            <h3>Design and Site by Evegeniy Gerasiemnko</h3>
+                        <div className="FooterDescription">
+                            <div className="NameOrganization">
+                                <h5 >
+                                    © 2021
+                                <b> TontonizeR</b>
+                                    <br />
+                                    <h3>Site by Evgeniy Gerasimenko</h3>
+                                    <br />
+                                    <a href="ee">
+                                        Privacy Policy
+                                    </a>
+                                    <a href="eee">
+                                        Terms of Use
+                                    </a>
+                                </h5>
+                            </div>
                         </div>
                     </div>
                 </div>
