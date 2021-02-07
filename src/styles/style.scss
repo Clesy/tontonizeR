@@ -4,11 +4,19 @@ body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
         "Droid Sans", "Helvetica Neue", sans-serif;
-    background-color: white;
+    background-color: #ffffff;
 }
 
 * {
     box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
 }
 
 .container {
@@ -18,7 +26,7 @@ body {
 
 /*HEADER*/
 
-.Nav {
+.navigation {
     display: flex;
     justify-content: space-between;
     top: 0;
@@ -29,7 +37,7 @@ body {
     z-index: 1000;
 }
 
-.NavLogo {
+.nav-logo {
     position: absolute;
     img {
         width: 70px;
@@ -37,24 +45,22 @@ body {
     }
 }
 
-.NavMenu {
+.nav-menu {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
-    list-style: none;
     width: 100%;
     margin: 0;
     nav {
         padding-top: 20px;
         display: flex;
-        a {
+        a{
             font-size: 20px;
-            text-decoration: none;
         }
     }
 }
 
-.NavLink {
+.nav-link {
     color: #ffffff;
     display: inline-block;
     vertical-align: top;
@@ -82,6 +88,27 @@ body {
     }
     &:hover::after {
         opacity: 1;
+    }
+}
+
+.back-to-top{
+    width: 2.5rem;
+    height: 2.5rem;
+    position: fixed;
+    outline: none;
+    right: 5px;
+    bottom: 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    background-color: #311B92;
+    img{
+       width: 20px;
+       height: 20px;
     }
 }
 
@@ -122,16 +149,10 @@ body {
     background: none;
     height: 50px;
     border: 2px solid #ffffff;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-
+    @include border;
     a {
         font-size: 20px;
         color: #ffffff;
-        text-decoration: none;
     }
 }
 
@@ -162,20 +183,26 @@ body {
 
 /*OUR TEAM*/
 
-.OurTeam {
-    height: 400px;
+.our-team {
+    height: 450px;
     background: linear-gradient(117.7deg, #6200ea 10.89%, rgba(255, 255, 255, 0) 59.28%), #4527a0;
 }
 
-.OurTeamHeading {
+.our-team-heading {
     @include heading();
     color: #ffffff;
 }
 
-.OurTeamColumn {
-    @include column();
+.our-team-info{
+    text-align: center;
+}
+
+.our-team-column {
+    @include column;
     padding: 15px;
     color: #ffffff;
+    height: 350px;
+
     img {
         width: 170px;
         height: 170px;
@@ -189,7 +216,7 @@ body {
     }
 }
 
-.OurTeamContact {
+.our-team-contact {
     img {
         padding: 5px;
         width: 50px;
@@ -217,11 +244,7 @@ body {
     margin: 0;
     padding: 0;
     height: 330px;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
+@include border;
 }
 
 .ProductsImage {
@@ -230,11 +253,7 @@ body {
         height: 200px;
         border: none;
         margin-top: 18px;
-        border-radius: 20px;
-        -webkit-border-radius: 20px;
-        -moz-border-radius: 20px;
-        -ms-border-radius: 20px;
-        -o-border-radius: 20px;
+        @include border;
     }
 }
 .ProductsInfo {
@@ -251,11 +270,7 @@ body {
         width: 130px;
         height: 40px;
         border: none;
-        border-radius: 20px;
-        -webkit-border-radius: 20px;
-        -moz-border-radius: 20px;
-        -ms-border-radius: 20px;
-        -o-border-radius: 20px;
+        @include border;
         transition: 0.5s;
         -webkit-transition: 0.5s;
         -moz-transition: 0.5s;
@@ -267,7 +282,6 @@ body {
             background-position: right;
         }
         a {
-            text-decoration: none;
             color: #ffffff;
             font-size: 17px;
             font-weight: 400;
@@ -296,13 +310,9 @@ textarea {
     margin-top: 6px;
     margin-bottom: 10px;
     border: 3px solid #4527a0;
-    border-radius: 20px;
     outline: 0;
     outline-offset: 0;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
+    @include border;
 }
 
 #BtnSubmitContactUS {
@@ -324,12 +334,9 @@ textarea {
 .ContactUSColumn {
     padding: 10px;
     background-color: #ffffff;
-    border-radius: 20px;
     margin: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
+    @include border;
+
 }
 
 .column {
@@ -407,7 +414,6 @@ textarea {
     }
     a {
         color: #4527a0;
-        text-decoration: none;
         margin-left: 20px;
         margin-right: 20px;
     }
@@ -417,58 +423,62 @@ textarea {
 
 @media screen and (max-width: 790px) {
     /*MENU BUTTON*/
-
-    .NavMenu {
-        position: fixed;
-        right: 0;
-        top: 0;
-        width: 50%;
-        height: 100vh;
+    .back-to-top{
+    display: none;
+    }
+    .nav-menu {
         display: flex;
-        background-color: rgb(0, 0, 0);
-        background-color: rgba(0, 0, 0, 0.9);
+        position: fixed;
         justify-content: center;
         flex-flow: column;
+        right: 0;
+        top: 0;
         padding: 0;
+        width: 50%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
         transition: 0.5s;
-        transform: translateX(100%);
         -webkit-transition: 0.5s;
         -moz-transition: 0.5s;
         -ms-transition: 0.5s;
         -o-transition: 0.5s;
+        transform: translateX(100%);
         -webkit-transform: translateX(100%);
         -moz-transform: translateX(100%);
         -ms-transform: translateX(100%);
         -o-transform: translateX(100%);
+
         nav {
             display: flex;
             align-items: center;
             flex-direction: column;
+            text-align: center;
             a {
                 font-size: 20px;
                 padding: 20px;
             }
+    
         }
-        .menuBtn {
+    
+        .menu-btn {
             display: block;
             width: 40px;
             height: 40px;
             background: linear-gradient(180deg, #fc0102 0%, #ffc400 100%);
-            border-radius: 50%;
             position: absolute;
             padding: 0;
             top: 20px;
             left: -55px;
+            border-radius: 50%;
             -webkit-border-radius: 50%;
             -moz-border-radius: 50%;
             -ms-border-radius: 50%;
             -o-border-radius: 50%;
-            transition: 0.8s;
-            -webkit-transition: 0.8s;
-            -moz-transition: 0.8s;
-            -ms-transition: 0.8s;
-            -o-transition: 0.8s;
-
+            transition: 0.2s;
+            -webkit-transition: 0.2s;
+            -moz-transition: 0.2s;
+            -ms-transition: 0.2s;
+            -o-transition: 0.2s;
             span {
                 position: absolute;
                 top: 50%;
@@ -513,7 +523,7 @@ textarea {
             }
         }
     }
-    .NavMenu {
+    .nav-menu {
         span.open {
             &::before {
                 width: 10px;
@@ -535,19 +545,19 @@ textarea {
             }
         }
     }
-    .NavMenu.active {
+    .nav-menu.active {
         transform: translateX(0%);
         -webkit-transform: translateX(0%);
         -moz-transform: translateX(0%);
         -ms-transform: translateX(0%);
         -o-transform: translateX(0%);
-        .menuBtn {
+        .menu-btn {
             padding: 0;
             top: 20px;
             left: 2px;
         }
     }
-    .NavMenu.inactive {
+    .nav-menu {
         transform: translateX(100%);
         -webkit-transform: translateX(100%);
         -moz-transform: translateX(100%);
@@ -577,14 +587,10 @@ textarea {
         }
     }
 
-    .OurTeam {
-        height: 400px;
-    }
-
-    .OurTeamHeading {
+    .our-team-heading {
         font-size: 18px;
     }
-    .OurTeamColumn {
+    .our-team-column {
         img {
             width: 120px;
             height: 120px;
@@ -593,7 +599,7 @@ textarea {
             font-size: 15px;
         }
     }
-    .OurTeamContact {
+    .our-team-contact {
         img {
             padding: 5px;
             width: 50px;
@@ -643,20 +649,16 @@ textarea {
         height: 750px;
     }
 
-    .OurTeam {
-        height: 400px;
-    }
-
-    .OurTeamHeading {
+    .our-team-heading {
         font-size: 18px;
     }
-    .OurTeamColumn {
+    .our-team-column {
         img {
             width: 120px;
             height: 120px;
         }
     }
-    .OurTeamContact {
+    .our-team-contact {
         img {
             padding: 5px;
             width: 50px;
@@ -688,7 +690,7 @@ textarea {
     }
 }
 
-@media screen and (min-width: 414px) and (max-width: 736px){
+@media screen and (min-width: 414px) and (max-width: 736px) {
     .ListOfAmazingFeatures {
         height: 750px;
     }

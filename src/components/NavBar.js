@@ -1,38 +1,64 @@
 import React, { useState } from 'react';
 import logo from '../images/Logo.svg';
+import back from '../images/arrow.svg';
 
 
 export const NavBar = () => {
     const [status, setStatus] = useState('close');
     const [active, setActive] = useState(false);
 
+    /* Scroll animation */
+    const anchors = document.querySelectorAll('a[href*="#"]')
+    for (let anchor of anchors) {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const classID = anchor.getAttribute('href').substr(1);
+            document.getElementById(classID).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    }
+
+    /* Scroll to Top */
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+
     return (
-        <>
-            <header>
-                <div className="сontainer">
-                    <div className="Nav">
-                        <div className="NavLogo">
-                            <img src={logo} alt="Logo" />
-                        </div>
-                        <div
-                            className={active ? 'NavMenu active' : 'NavMenu'}
-                            onClick={() => setActive(!active)}>
-                            <nav>
-                                <a href
-                                    className="menuBtn"
-                                    role="button"
-                                    onClick={() => setStatus(status === 'open' ? 'close' : 'open')}>
-                                    <span className={status}></span>
-                                </a>
-                                <a href="/" className="NavLink">Home</a>
-                                <a href="/About" className="NavLink">About</a>
-                                <a href="/productss" className="NavLink">Download</a>
-                                <a href="/ContactUS" className="NavLink">ContactUS</a>
-                            </nav>
-                        </div>
+        <header id="nav">
+            <div className="сontainer">
+                <div className="navigation">
+                    <div className="nav-logo">
+                        <img src={logo} alt="Logo" />
+                    </div>
+                    <div
+                        className={active ? 'nav-menu active' : 'nav-menu'}
+                        onClick={() => setActive(!active)}>
+                        <nav>
+                            <a href
+                                className="menu-btn"
+                                role="button"
+                                onClick={() => setStatus(status === 'open' ? 'close' : 'open')}>
+                                <span className={status}></span>
+                            </a>
+                            <a href="#nav" className="nav-link"> Home</a>
+                            <a href="#team" className="nav-link">Our team</a>
+                            <a href="#products" className="nav-link">Products</a>
+                            <a href="#contact" className="nav-link">ContactUS</a>
+                        </nav>
                     </div>
                 </div>
-            </header>
-        </>
+                <button className="back-to-top" onClick={scrollToTop} >
+                    <img src={back} alt="Back to top" />
+                </button>
+            </div>
+        </header>
+
     );
 }

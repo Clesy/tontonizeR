@@ -7,7 +7,7 @@ import jumper from '../images/jumper.svg';
 class Producs extends Component {
     render() {
         return (
-            <div id="#products-anchor">
+            <div id="products">
                 <div className="Products">
                     <div className="container">
                         <div className="ProductsHeading">

@@ -11,7 +11,7 @@ export const Intro = () => {
                     </div>
                     <div className="BtnDownload">
                         <button className="Download">
-                            <a href="#Download">Download</a>
+                            <a href="#products">Download</a>
                         </button>
                     </div>
                 </div>

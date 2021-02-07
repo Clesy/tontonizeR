@@ -10,26 +10,25 @@ import Products from './components/Products';
 function App() {
   return (
     <div>
-      <NavBar />
-      <section>
-        <Intro />
-      </section>
-      <section>
-        <ListFeatures />
-      </section>
-      <section>
-        <OurTeam />
-      </section>
-      <section>
-        <Products />
-      </section>
-      <section>
-        <ContactUS />
-      </section>
-      <section>
-        <Footer />
-      </section>
-
+        <NavBar />
+        <section>
+          <Intro />
+        </section>
+        <section>
+          <ListFeatures />
+        </section>
+        <section>
+          <OurTeam />
+        </section>
+        <section>
+          <Products />
+        </section>
+        <section>
+          <ContactUS />
+        </section>
+        <section>
+          <Footer />
+        </section>
     </div>
   );
 }
