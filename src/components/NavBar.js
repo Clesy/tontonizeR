@@ -42,6 +42,7 @@ export const NavBar = () => {
                         onClick={() => setActive(!active)}>
                         <nav>
                             <a href
+                                id = "menuBtn"
                                 className="menu-btn"
                                 role="button"
                                 onClick={() => setStatus(status === 'open' ? 'close' : 'open')}>
@@ -54,7 +55,7 @@ export const NavBar = () => {
                         </nav>
                     </div>
                 </div>
-                <button className="back-to-top" onClick={scrollToTop} >
+                <button id='backToTop' className="back-to-top" onClick={scrollToTop} >
                     <img src={back} alt="Back to top" />
                 </button>
             </div>

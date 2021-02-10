@@ -4,7 +4,7 @@ import { ListFeatures } from './components/ListFeatures';
 import { OurTeam } from './components/OurTeam';
 import { Intro } from './components/Intro';
 import { Footer } from './components/Footer';
-import { ContactUS } from './components/ContactUS';
+import FormContactUS from './components/FormContactUS';
 import Products from './components/Products';
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
           <Products />
         </section>
         <section>
-          <ContactUS />
+          <FormContactUS />
         </section>
         <section>
           <Footer />

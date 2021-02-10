@@ -27,7 +27,7 @@ class Producs extends Component {
                                 and fits well as a party game for larger crowds. The game is very competitive. </p>
                                 <div Style="text-align: right; margin-right: 20px;">
                                         <button  >
-                                            <a href="#ff"> Download </a>
+                                            <a href="https://t.me/Tontonizer/3"> Download </a>
                                         </button>
                                     </div>
                                 </div>

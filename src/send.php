@@ -4,9 +4,9 @@
 include 'telegramData.php';    
 
 // input field name
-$name = $_POST['firstname'];    
+$name = $_POST['name'];    
 $email = $_POST['email'];       
-$message = $_POST['subject'];   
+$message = $_POST['message'];   
 
 // import token and chatID from telegramData.php
 $token = $telegram_token_bot ;  
